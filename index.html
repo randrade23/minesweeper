@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="js/tray.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<title>Minesweeper</title>
+</head>
+<body>
+
+
+<div id="beforelogin">
+	 <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div><b>Mine<span>Sweeper</span></b></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="username" name="user" id='user'><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="button" value="Login">
+				<input type="button" value="Enter as guest" onclick="loginAsGuest();">
+		</div>
+</div>
+
+
+
+<div id="afterlogin">
+	<nav id="fixed-nav-bar">
+  		
+  		<div id="title">Minesweeper</div>
+
+  		<ul class="menu">
+  			<!--<li class="menu_element">Modo de Jogo
+  				<ul class="submenu">
+	          		<li class="submenu_element">SinglePlayer</li>
+	            	<li class="submenu_element">Multiplayer</li> 
+          		</ul>
+  			</li>-->
+  			<li class="menu_element">Dificuldade
+	            <ul class="submenu">
+	          		<li class="submenu_element" onclick="setGameMode(1);">Beginner</li>
+	            	<li class="submenu_element" onclick="setGameMode(2);">Intermediate</li>
+	            	<li class="submenu_element" onclick="setGameMode(3);">Expert</li> 
+          		</ul>
+        	</li>
+        	<li class="menu_element">Quadro de Honra
+        		<ul class="submenu">
+	          		<li class="submenu_element" onclick="setHighscore(1);">Beginner</li>
+	            	<li class="submenu_element" onclick="setHighscore(2);">Intermediate</li>
+	            	<li class="submenu_element" onclick="setHighscore(3);">Expert</li> 
+          		</ul>
+        	</li>
+  		</ul>			
+	</nav> 
+
+	<div id="quadroHonra">
+		<h1 id="highScoreTitle">Quadro de Honra</h1>
+		<hr>
+		<div id="lista_quadroHonra">
+			<ol id="highscore_list"> 
+			</ol>
+		</div>
+
+	</div>
+
+	<div id="mainwrap">
+
+		<div id="progress">
+			<ul>
+				<li>Minas: <span id="minecount">99</span></li>
+				<li>Tempo: <span id="secondcount">0</span></li>
+				<li onclick="restart();">Recome&ccedil;ar</li>
+				<li onclick="game_over=false;">Continuar o jogo</li>
+			</ul>
+		</div>
+
+		<div id="game">
+			<table class="tray"></table>
+			<br/>
+		</div>
+	</div>	
+</div>
+</body>
+</html>
+
+
+
